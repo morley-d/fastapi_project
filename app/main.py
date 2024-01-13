@@ -14,14 +14,14 @@ class ShemaHotel(BaseModel):
 
 
 
-@app.get("/hotels/", response_model=list[ShemaHotel])
+@app.get("/hotels/")
 def get_hotels(
     location: str,
     date_from: date,
     date_to: date,
     stars: Optional[int] = Query(None, ge=1, le=5),
     has_spa: Optional[bool] = None
-):
+) -> list[ShemaHotel]:
     hotels = [
         {
             "adress": "ул.Гагарина, 1, Алтай",
