@@ -14,7 +14,7 @@ router = APIRouter(
 @router.get("")
 async def get_bookings():
     async with async_session_maker() as session:
-        return BookingDAO.find_all()
+        return await BookingDAO.find_all()
 
 
 @router.get("/{booking_id}")
