@@ -10,7 +10,7 @@ class ShemaBooking(BaseModel):
     date_to: date
     price: int
     total_cost: int
-    otal_days: int
+    total_days: int
 
     class Config:
         orm_mode = True
