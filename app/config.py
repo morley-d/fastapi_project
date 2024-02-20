@@ -1,3 +1,7 @@
+"""
+Конфигурация для подключения к БД
+"""
+
 from pydantic_settings import BaseSettings
 # from pydantic import root_validator
 
